@@ -48,6 +48,7 @@ If you can't access the NodePort service webapp with `MinikubeIP:NodePort`, exec
 
 This command creates a tunnel and provides a new URL for access, expect something to similar to this:
 
+```
 $ minikube service webapp-service
 |-----------|----------------|-------------|---------------------------|
 | NAMESPACE |      NAME      | TARGET PORT |            URL            |
@@ -62,16 +63,21 @@ $ minikube service webapp-service
 |-----------|----------------|-------------|------------------------|
 🎉  Opening service default/webapp-service in default browser...
 ❗  Because you are using a Docker driver on darwin, the terminal needs to be open to run it.
+```
+
 
 
 Option 2:
 
 Recreate the cluster as follows:
+```
 $ minikube delete
 $ minikube start --driver=docker --ports=30100:30100
+```
+
 
 Change to the directory of the project with all the config files and run:
-$ kubectl apply -f .
+`$ kubectl apply -f .`
 
 Now you can connect to the webapp using http://localhost:30100 or http://127.0.0.1:30100
 
