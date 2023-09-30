@@ -39,14 +39,14 @@
 
 > :warning: **Known issue - Minikube IP not accessible** 
 
-Option 1:
+**Option 1:**
 
 If you can't access the NodePort service webapp with `MinikubeIP:NodePort`, execute the following command:
     
     minikube service webapp-service
 
 
-This command creates a tunnel and provides a new URL for access, expect something to similar to this:
+This command creates a tunnel and provides a new URL for access, expect something similar to this:
 
 ```
 $ minikube service webapp-service
@@ -67,7 +67,7 @@ $ minikube service webapp-service
 
 
 
-Option 2:
+**Option 2:**
 
 Recreate the cluster as follows:
 ```
