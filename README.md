@@ -45,7 +45,9 @@ If you can't access the NodePort service webapp with `MinikubeIP:NodePort`, exec
     
     minikube service webapp-service
 
-This commands creates a tunnel and provides a new URL for access, expect something to similar to this:
+
+This command creates a tunnel and provides a new URL for access, expect something to similar to this:
+
 $ minikube service webapp-service
 |-----------|----------------|-------------|---------------------------|
 | NAMESPACE |      NAME      | TARGET PORT |            URL            |
@@ -63,6 +65,7 @@ $ minikube service webapp-service
 
 
 Option 2:
+
 Recreate the cluster as follows:
 $ minikube delete
 $ minikube start --driver=docker --ports=30100:30100
@@ -70,7 +73,7 @@ $ minikube start --driver=docker --ports=30100:30100
 Change to the directory of the project with all the config files and run:
 $ kubectl apply -f .
 
-Now you can connect to the webapp using http://localhost:30100
+Now you can connect to the webapp using http://localhost:30100 or http://127.0.0.1:30100
 
 Source: https://github.com/kubernetes/minikube/issues/11193
 
